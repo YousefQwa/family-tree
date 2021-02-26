@@ -1,6 +1,7 @@
 const dbConnection = require("../dbConnection");
-const getPerson = (id) =>
-  dbConnection
+const getPerson = (id) => {
+  console.log("111111111111111111111111111", id);
+  return dbConnection
     .query("select * from person where id = $1", [id])
     .then((res) => {
       console.log(res.rows, "resresres0000000000000000000000");
@@ -11,5 +12,5 @@ const getPerson = (id) =>
 
       return err;
     });
-
+};
 module.exports = getPerson;
