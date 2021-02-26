@@ -5,6 +5,7 @@ const getPerson = (req, res) => {
 
   getPersonQuery(req.params.personId)
     .then((person) => {
+      console.log(person, "ppppppppppppppppppppppperson");
       res.send(person);
     })
     .catch((err) => res.send("err"));
