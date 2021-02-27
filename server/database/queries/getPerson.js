@@ -1,5 +1,6 @@
 const dbConnection = require("../dbConnection");
 const getPerson = (id) => {
+  console.log(dbConnection, "--111111111111");
   console.log("111111111111111111111111111", id);
   dbConnection
     .query("select * from person where id = $1", [id])
