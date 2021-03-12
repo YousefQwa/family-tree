@@ -1,6 +1,10 @@
 const { Pool } = require("pg");
 require("env2")("./config.env");
-console.log("88888888888888888888");
+console.log(
+  "888888888888888888881",
+  Pool,
+  "1888888888888888888888888888888888"
+);
 
 const connectionString = process.env.DATABASE_URL;
 console.log("99999999999999999999999999");
