@@ -1,6 +1,6 @@
 const fs = require("fs");
 const dbConnection = require("./dbConnection");
-
+console.log(dbConnection, "*000000000*");
 const dbBuild = () => {
   const createDataBase = fs.readFileSync(`${__dirname}/dbBuild.sql`).toString();
   const initDummyDate = fs
@@ -14,9 +14,9 @@ const dbBuild = () => {
       dbConnection
         .query(initDummyDate)
         .then(() => console.log("The data has been inserted successfully"))
-        .catch(err => console.log(err, "insert data is failed"));
+        .catch((err) => console.log(err, "insert data is failed"));
     })
-    .catch(err => console.log(err, "create database is failed"));
+    .catch((err) => console.log(err, "create database is failed"));
 };
 // dbBuild();
 module.exports = dbBuild;
