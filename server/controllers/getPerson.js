@@ -9,6 +9,7 @@ const getPerson = (req, res) => {
       res.send(person);
     })
     .catch((err) => res.send("err"));
+  res.send("wowwowowwowowwwo");
 };
 
 module.exports = getPerson;
