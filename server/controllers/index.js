@@ -5,7 +5,13 @@ const getParents = require("./getParents");
 const getParent = require("./getParent");
 const getTree = require("./getTree");
 const getPerson = require("./getPerson");
-router.get("/", (req, res) => {
+const tryQuery = require("../database/queries/try");
+
+router.get("/", async (req, res) => {
+  const a = await tryQuery();
+  console.log(
+    "ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddone"
+  );
   res.send("00000");
 });
 router.get("/parents/:childId", getParents);
